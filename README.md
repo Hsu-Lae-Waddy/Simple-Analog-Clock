@@ -1,2 +1,5 @@
-# Simple-Analog-Clock
-Simple Analog clock with three hand (hours, minutes,seconds) 
+ Simple-Analog-Clock
+Simple Analog clock with three hands (hours, minutes, seconds) 
+
+
+
