@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212121;
+}
+.container{
+    position: relative;
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(225,225, 225,0.1);
+    border: 2px solid rgb(225,225, 225,0.25);
+    box-shadow: 0px 0px 30px rgb(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+  
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    background-color: white;
+}
+.number {
+    position: absolute;
+    transform: rotate(calc(var(--i) * 30deg));
+    inset: 12px;
+    text-align: center;
+}
+
+/* Assign CSS variable --i dynamically */
+.number[data-i="1"] { --i: 1; }
+.number[data-i="2"] { --i: 2; }
+.number[data-i="3"] { --i: 3; }
+.number[data-i="4"] { --i: 4; }
+.number[data-i="5"] { --i: 5; }
+.number[data-i="6"] { --i: 6; }
+.number[data-i="7"] { --i: 7; }
+.number[data-i="8"] { --i: 8; }
+.number[data-i="9"] { --i: 9; }
+.number[data-i="10"] { --i: 10; }
+.number[data-i="11"] { --i: 11; }
+.number[data-i="12"] { --i: 12; }
+
+.clock span b{
+    transform: rotate(calc(var(--i) * -30deg));
+    display: inline-block;
+    font-size: 20px;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.hand i{
+    position: absolute;
+    background-color: #fff;
+    width: 4px;
+    height: 70px;
+    border-radius: 8px;
+}
+
+.hour-hand {
+    width: 8px;
+    height: 70px;
+    background-color: red;
+  }
+  
+  .minute-hand {
+    width: 6px;
+    height: 90px;
+    background-color: green;
+  }
+  
+  .second-hand {
+    width: 4px;
+    height: 100px;
+    background-color: blue;
+  }
